@@ -8,4 +8,3 @@
 ----------
 ### Пошаговое выполнение
 ----------
-[![Softmax](./resources/softmax.webp)](https://gitverse.ru/new_horizons/NeuralNetworks/content/master/articles/article2)
