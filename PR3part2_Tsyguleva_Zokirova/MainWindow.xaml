@@ -5,8 +5,48 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PR3part2_Tsyguleva_Zokirova"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
-</Window>
+       Title="Периметры фигур" Height="350" Width="400">
+    <Grid Margin="10">
+            <StackPanel>
+                <!-- Выбор фигуры -->
+                <GroupBox Header="Выберите фигуру:">
+                    <StackPanel>
+                        <RadioButton x:Name="rbRectangle" Content="Прямоугольник" Margin="5"/>
+                        <RadioButton x:Name="rbCircle" Content="Круг" Margin="5"/>
+                        <RadioButton x:Name="rbTriangle" Content="Треугольник" Margin="5"/>
+                    </StackPanel>
+                </GroupBox>
+
+                <!-- Поля ввода (изначально скрыты) -->
+                <StackPanel x:Name="inputPanel" Visibility="Collapsed" Margin="0,10">
+                    <!-- Для прямоугольника -->
+                    <StackPanel x:Name="rectangleInputs">
+                        <TextBlock Text="1-я сторона:"/>
+                        <TextBox x:Name="txtSide1" Margin="0,5"/>
+                        <TextBlock Text="2-я сторона:"/>
+                        <TextBox x:Name="txtSide2" Margin="0,5"/>
+                    </StackPanel>
+
+                    <!-- Для круга -->
+                    <StackPanel x:Name="circleInputs" Visibility="Collapsed">
+                        <TextBlock Text="Радиус:"/>
+                        <TextBox x:Name="txtRadius" Margin="0,5"/>
+                    </StackPanel>
+
+                    <!-- Для треугольника -->
+                    <StackPanel x:Name="triangleInputs" Visibility="Collapsed">
+                        <TextBlock Text="1-я сторона:"/>
+                        <TextBox x:Name="txtA" Margin="0,5"/>
+                        <TextBlock Text="2-я сторона:"/>
+                        <TextBox x:Name="txtB" Margin="0,5"/>
+                        <TextBlock Text="3-я сторона:"/>
+                        <TextBox x:Name="txtC" Margin="0,5"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <!-- Кнопка и результат -->
+                <Button x:Name="btnCalculate" Content="Вычислить" Margin="0,10" Click="btnCalculate_Click"/>
+                <TextBlock x:Name="tbResult" FontSize="16" Text="Периметр = ______"/>
+            </StackPanel>
+        </Grid>
+    </Window>
